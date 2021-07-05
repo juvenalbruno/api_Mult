@@ -1,9 +1,14 @@
-import { Request, Response, Router } from "express";
+import { Router } from "express";
+import { CreateUserController } from "./app/controllers/CreateUserController";
+import { ListUsersController } from "./app/controllers/ListuserController";
 
 const router = Router();
 
-router.get("/", (req: Request, res: Response) => [
-    res.json("Foi!")
-])
+const createUserController = new CreateUserController();
+const listUserController = new ListUsersController();
+
+router
+    .post("/users", createUserController.handle)
+    .get("/users", listUserController.handle)
 
 export { router };
