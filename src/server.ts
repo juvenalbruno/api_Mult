@@ -1,6 +1,8 @@
 import express, { NextFunction, Request, Response } from 'express';
 import { router } from './router';
 
+import './database/connect';
+
 const HOST = 3000;
 
 const app = express();

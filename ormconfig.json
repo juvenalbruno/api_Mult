@@ -1,0 +1,11 @@
+{
+    "type": "postgres",
+    "host": "host.docker.internal",
+    "port": 5432,
+    "username": "postgres",
+    "password": "postgres",
+    "database": "mult_db",
+    "entities": [ "src/app/models/*.ts" ],
+    "migrations": [ "src/database/migrations/*.ts" ],
+    "cli": { "migrationsDir": "src/database/migrations" }
+}
